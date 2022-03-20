@@ -14,8 +14,8 @@ void bentuk_awal()
 {
     struct DLNode *awal;
     int j = 0;
-    char jawab[2];
-    while (1)
+    char jawab;
+    do
     {
 
         awal = (struct DLNode *)malloc(sizeof(struct DLNode));
@@ -39,17 +39,26 @@ void bentuk_awal()
         }
 
         cout<<"Ada data lagi(y/t):";
-        cin>>jawab;
+        cin >> jawab;
         cout<<endl;
-        
-        if ((strcmp(jawab, "Y") == 0) || (strcmp(jawab, "y") == 0))
+
+        if (jawab == 'y' || jawab == 'Y')
         {
             j++;
-            continue;
         }
-        else if ((strcmp(jawab, "T") == 0) || (strcmp(jawab, "t") == 0))
-            break;
-    }
+        
+        
+        // if ((strcmp(jawab, "Y") == 0) || (strcmp(jawab, "y") == 0))
+        // {
+        //     j++;
+        //     continue;
+        // }
+        // else if ((strcmp(jawab, "T") == 0) || (strcmp(jawab, "t") == 0)){
+        //     break;
+        
+    } while (jawab == 'y');
+    
+    
 }
 
 void tampil_list_lifo()
